@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
-
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //locationAuthStatus()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+       // locationAuthStatus()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    func locationAuthStatus(){
+//        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
+//            //map.showsUserLocation = true
+//            print(locationManager.location)
+//        } else {
+//            locationManager.requestWhenInUseAuthorization()
+//        }
+//    }
 
+    
 
 }
 
